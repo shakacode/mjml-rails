@@ -5,7 +5,7 @@ module Mjml
 
     initializer "mjml-rails.register_template_handler" do
       ActionView::Template.register_template_handler :mjml, Mjml::Handler.new
-      Mime::Type.register "text/html", :mjml
+      Mime::Type.register_alias "text/html", :mjml
     end
   end
 end
